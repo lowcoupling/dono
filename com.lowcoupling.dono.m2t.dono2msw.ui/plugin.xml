@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.*"
+            id="com.lowcoupling.ddl.m2t.ddl2msw.ui.popupMenus.contribution.IFile">
+         <menu id="org.eclipse.acceleo.module.menu.ddl" label="Docs Generation" path="additionsAcceleo">
+               <groupMarker name="acceleo"/> 
+         </menu>
+         <action
+               class="com.lowcoupling.dono.m2t.dono2msw.ui.popupMenus.AcceleoGenerateDocml2mswAction"
+               enablesFor="+"
+               id="com.lowcoupling.ddl.m2t.ddl2msw.ui.popupMenus.acceleoGenerateDdl2mswAction"
+               icon="icons/default.gif"
+               label="Generate Word Doc"
+               menubarPath="org.eclipse.acceleo.module.menu.ddl/acceleo"/>
+      </objectContribution>
+   </extension>
+</plugin>

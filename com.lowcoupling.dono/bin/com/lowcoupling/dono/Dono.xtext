@@ -1,0 +1,63 @@
+grammar com.lowcoupling.dono.Dono with org.eclipse.xtext.common.Terminals
+
+generate dono "http://www.lowcoupling.com/dono/Dono"
+
+Doc:
+	'doc' name= ID OPENCURLY
+	sections+= Section*
+	CLOSECURLY 
+	;
+	
+QualifiedName:
+    ID ('.' ID)*;
+    	
+Section:
+	'section'name=ID 'title'title=STRING ('level' level=INT)? (pageBreak ='pagebreak')? OPENCURLY
+	//the section body is optional
+	(body+=DocItem)*
+	CLOSECURLY
+;
+DocItem:
+	Paragraph|
+	Image
+;
+
+ParagraphItem:
+	Text|
+	Reference
+;
+
+Paragraph:
+	OPENCURLY
+		(body+=ParagraphItem)*
+	CLOSECURLY
+	
+;
+
+Reference:
+	SectionReference|ImgReference
+;
+SectionReference:
+	'secRef' ref=[Section]
+;
+ImgReference:
+	'imgRef' ref=[Image|QualifiedName]
+;
+
+PageBreak:
+	pagebreak='pagebreak'ENDLINE
+;
+Image:
+	'image' url=STRING 'name' name=ID 'caption' caption=STRING ( ('width' width=INT)
+											('height' height=INT)
+										  )? ENDLINE
+;
+
+Text:
+	content=STRING
+;
+terminal OPENCURLY:'{';
+terminal CLOSECURLY: '}';
+terminal ENDLINE: ';';
+
+	

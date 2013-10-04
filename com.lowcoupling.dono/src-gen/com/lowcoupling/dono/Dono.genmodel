@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.lowcoupling.dono/src-gen" editDirectory="/com.lowcoupling.dono.edit/src"
+    editorDirectory="/com.lowcoupling.dono.editor/src" modelPluginID="com.lowcoupling.dono"
+    forceOverwrite="true" modelName="Dono" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.lowcoupling.dono.edit"
+    editorPluginID="com.lowcoupling.dono.editor" runtimeVersion="2.9">
+  <genPackages prefix="Dono" basePackage="com.lowcoupling.dono" disposableProviderFactory="true"
+      fileExtensions="dono" ecorePackage="Dono.ecore#/">
+    <genClasses ecoreClass="Dono.ecore#//Doc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Doc/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dono.ecore#//Doc/sections"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//Section">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Section/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Section/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Section/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Section/pageBreak"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dono.ecore#//Section/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//DocItem"/>
+    <genClasses ecoreClass="Dono.ecore#//ParagraphItem"/>
+    <genClasses ecoreClass="Dono.ecore#//Paragraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dono.ecore#//Paragraph/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//Reference"/>
+    <genClasses ecoreClass="Dono.ecore#//SectionReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dono.ecore#//SectionReference/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//ImgReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dono.ecore#//ImgReference/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//PageBreak">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//PageBreak/pagebreak"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Image/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Image/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Image/caption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Image/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Image/height"/>
+    </genClasses>
+    <genClasses ecoreClass="Dono.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dono.ecore#//Text/content"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
