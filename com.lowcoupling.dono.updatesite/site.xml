@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.lowcoupling.dono.m2t.donoGenFeature_1.0.0.201310011726.jar" id="com.lowcoupling.dono.m2t.donoGenFeature" version="1.0.0.201310011726">
+      <category name="dono_ml_category"/>
+   </feature>
+   <feature url="features/com.lowcoupling.dono.sdk_1.0.0.201310011726.jar" id="com.lowcoupling.dono.sdk" version="1.0.0.201310011726">
+      <category name="dono_ml_category"/>
+   </feature>
+   <category-def name="dono_ml_category" label="Document Notation"/>
+</site>
